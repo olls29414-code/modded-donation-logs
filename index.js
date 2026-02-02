@@ -6,6 +6,10 @@ import fetch from "node-fetch";
 const app = express();
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Donation image generator is running");
+});
+
 app.post("/generate", async (req, res) => {
   const data = req.body;
 
